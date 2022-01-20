@@ -1,0 +1,111 @@
+body { 
+    margin: 0;
+    padding: 0;
+}
+
+  .container {
+    display: flex;
+    
+    align-items: center;
+    justify-content: space-between;
+    
+    width: 100vw; /* viewport width */ /* 1vw == 1% del total de la pantalla */
+    height: 100vh; /* viewport height */
+    background-color: #333;
+    margin-bottom: 5vh;
+  }
+
+  /* Especificidad  */
+  .container > .pepito {
+    background-color: tomato;
+  }
+  .container > #pepito {
+      background-color: aquamarine;
+  }
+  .container > div {
+    background-color: crimson;
+    border: 10px solid teal;
+    width: 300px;
+    height: 300px;
+  }
+
+  .container.align-start {
+      align-items: flex-start;
+  }
+
+  .container.align-end {
+    align-items: flex-end;
+  }
+  
+  .container.justify-center {
+    justify-content: center;
+  }
+  
+  .container.justify-start {
+    justify-content: flex-start;
+  }
+  
+  .container.justify-end {
+    justify-content: flex-end;
+  }
+
+  .container.justify-space-around {
+    justify-content: space-around;
+  }
+
+  .container.align-self > div:nth-child(1) {
+      align-self: flex-end;
+  }
+
+  .container.align-self > div:nth-child(3) {
+    align-self: flex-start;
+  }
+
+  .container.wrap {
+      flex-wrap: wrap;
+  }
+
+
+  /**********************************************************
+   * Encabezado 
+   **********************************************************/
+
+   .main-header {
+        display: flex;
+        height: 60px;
+        margin-bottom: 40px;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+
+        box-shadow: 0 5px 5px 0 #666;
+    }
+
+   .main-logo {
+       width: 100px;
+       max-width: 100%;
+   }
+   .user-button {
+       width: 50px;
+       background-color: transparent;
+       border-width: 1px;
+       border-radius: 50%;
+       height: 50px;
+   }
+   .user-button--icon {
+       max-width: 100%;
+   }
+   
+   .main-nav {
+        align-self: flex-end;
+        display: flex;
+        width: 600px;
+        justify-content: space-between;
+   }
+
+   .user-button-container {
+        display: flex;
+        width: 150px;
+        align-items: center;
+        justify-content: space-around;
+   }
